@@ -1,9 +1,5 @@
 import React from "react";
-
-interface MetricItemProps {
-	label: string;
-	value: string | number;
-}
+import { type MetricItemProps } from "../../types/interfaces";
 
 const MetricItem: React.FC<MetricItemProps> = ({ label, value }) => {
 	return (

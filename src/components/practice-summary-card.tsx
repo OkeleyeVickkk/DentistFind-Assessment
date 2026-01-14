@@ -1,20 +1,5 @@
 import React from "react";
-
-export type PracticeSummary = {
-	id: string;
-	name: string;
-	city: string;
-	country: string;
-	newPatientsThisMonth: number;
-	appointmentRequests: number;
-	conversionRate: number;
-	monthlyTrend: number[]; // 6 months
-	marketingSpend?: number; // optional additional metric
-};
-
-interface PracticeSummaryCardProps {
-	practice: PracticeSummary;
-}
+import { type PracticeSummaryCardProps } from "../types/interfaces";
 
 const PracticeSummaryCard: React.FC<PracticeSummaryCardProps> = ({ practice }) => {
 	const getStatus = (rate: number) => {
@@ -62,7 +47,7 @@ const PracticeSummaryCard: React.FC<PracticeSummaryCardProps> = ({ practice }) =
 				<div>
 					<h3 className="text-sm font-semibold text-gray-800 mb-2">6-Month Trend</h3>
 					<div className="flex items-end h-16 gap-1">
-						{practice.monthlyTrend.map((value, index) => (
+						{practice.monthlyTrend.map((value: number, index: number) => (
 							<div
 								key={index}
 								className="bg-blue-500 rounded-sm min-h-1 flex-1"

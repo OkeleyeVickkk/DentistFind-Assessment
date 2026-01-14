@@ -2,22 +2,7 @@ import React from "react";
 import TrendChart from "./trend-chart";
 import MetricItem from "./metric-item";
 import Badge from "./badge";
-
-export type PracticeSummary = {
-	id: string;
-	name: string;
-	city: string;
-	country: string;
-	newPatientsThisMonth: number;
-	appointmentRequests: number;
-	conversionRate: number;
-	monthlyTrend: number[];
-	marketingSpend?: number;
-};
-
-interface PracticeSummaryCardProps {
-	practice: PracticeSummary;
-}
+import { type PracticeSummaryCardProps } from "../../types/interfaces";
 
 const PracticeSummaryCard: React.FC<PracticeSummaryCardProps> = ({ practice }) => {
 	const getStatus = (rate: number): { label: string; variant: "success" | "warning" | "danger" } => {
@@ -55,7 +40,7 @@ const PracticeSummaryCard: React.FC<PracticeSummaryCardProps> = ({ practice }) =
 				</div>
 				<div>
 					<h3 className="text-sm font-semibold text-gray-800 mb-2">6-Month Trend</h3>
-					<TrendChart trend={practice.monthlyTrend} />
+					<TrendChart trend={practice.monthlyTrend} variant={status.variant} />
 				</div>
 				<div className="mt-3">
 					<h3 className="text-sm font-semibold text-gray-800 mb-2">Recommendations</h3>

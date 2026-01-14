@@ -1,10 +1,5 @@
 import React from "react";
-
-interface BadgeProps {
-	label: string;
-	variant?: "success" | "warning" | "danger";
-	className?: string;
-}
+import { type BadgeProps } from "../../types/interfaces";
 
 const Badge: React.FC<BadgeProps> = ({ label, variant = "success", className = "" }) => {
 	const variantClasses = {

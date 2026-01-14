@@ -1,4 +1,4 @@
-import { type PracticeSummary } from "../components/common/practice-summary-card";
+import { type PracticeSummary } from "../types/types";
 
 export const mockPractices: PracticeSummary[] = [
 	{
@@ -9,7 +9,7 @@ export const mockPractices: PracticeSummary[] = [
 		newPatientsThisMonth: 25,
 		appointmentRequests: 40,
 		conversionRate: 22.5,
-		monthlyTrend: [15, 18, 20, 22, 25, 28],
+		monthlyTrend: [15, 18, 20, 22, 25, 28], // High Performer: consistent upward growth
 		marketingSpend: 1500,
 	},
 	{
@@ -20,7 +20,7 @@ export const mockPractices: PracticeSummary[] = [
 		newPatientsThisMonth: 18,
 		appointmentRequests: 30,
 		conversionRate: 8.5,
-		monthlyTrend: [12, 10, 8, 15, 18, 20],
+		monthlyTrend: [25, 22, 18, 15, 12, 10], // At Risk: declining trend
 		marketingSpend: 1200,
 	},
 	{
@@ -31,7 +31,7 @@ export const mockPractices: PracticeSummary[] = [
 		newPatientsThisMonth: 32,
 		appointmentRequests: 50,
 		conversionRate: 15.0,
-		monthlyTrend: [20, 22, 25, 28, 30, 32],
+		monthlyTrend: [28, 30, 29, 31, 30, 32], // Stable: relatively flat with minor fluctuations
 		marketingSpend: 1800,
 	},
 ];
