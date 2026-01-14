@@ -17,10 +17,6 @@
 }
 
 @theme {
-	--color-primary: #e31e24;
-	--color-primary-dark: #27004e;
-	--color-background: #f4f7fa;
-
 	--font-inter: "__08b57253-2e0d-4c12-9c57-107f6c67bc49__";
 }
 button,
